@@ -1,20 +1,130 @@
-<ion-header [translucent]="true">
+<ion-header>
     <ion-toolbar>
-        <ion-title>
-            Home
-        </ion-title>
+        <ion-title>Calculadora</ion-title>
     </ion-toolbar>
 </ion-header>
-/*ionic generate page nombre_pagina*/
-<ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Home</ion-title>
-        </ion-toolbar>
-    </ion-header>
 
-    <div id="container">
-        <h1>hola</h1>
-    </div>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="10" color="primary">
+                <ion-label class="pantalla">
+                    {{pantalla}}
+                </ion-label>
+            </ion-col>
+        </ion-row>
 
+        <ion-row>
+            <ion-col size="3">
+                <ion-button (click)="Borrartodo()" size="large" expand="full">
+                    AC
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Borrarnumero()" size="large" expand="full">
+                    C
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button size="large" expand="full">
+                    %
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Operador('/')" size="large" expand="full">
+                    /
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="3">
+                <ion-button (click)="Numero(7)" size="large" expand="full">7</ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Numero(8)" size="large" expand="full">
+                    8
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Numero(9)" size="large" expand="full">
+                    9
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Operador('*')" size="large" expand="full">
+                    <ion-icon size="large" name="close"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="3">
+                <ion-button (click)="Numero(4)" size="large" expand="full">
+                    4
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Numero(5)" size="large" expand="full">
+                    5
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Numero(6)" size="large" expand="full">
+                    6
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Operador('-')" size="large" expand="full">
+                    <ion-icon size="large" name="remove"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="3">
+                <ion-button (click)="Numero(1)" size="large" expand="full">
+                    1
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Numero(2)" size="large" expand="full">
+                    2
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Numero(3)" size="large" expand="full">
+                    3
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Operador('+')" size="large" expand="full">
+                    <ion-icon size="large" name="add"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="3">
+                <ion-button (click)="Signo('+/-')" size="large" expand="full">
+                    +/-
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Numero(0)" size="large" expand="full">
+                    0
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="Decimalnum()" size="large" expand="full">
+                    .
+                </ion-button>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button (click)="calcular()" size="large" expand="full">
+                    =
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
